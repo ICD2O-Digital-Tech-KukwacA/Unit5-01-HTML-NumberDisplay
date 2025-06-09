@@ -1,9 +1,81 @@
+<!--Assign-03-HTML-Calculations-->
 <!DOCTYPE html>
 <html>
   <head>
     <title>Title</title>
+    <!--Metadata-->
+    <meta charset="utf-8" />
+    <meta name="description" content="Speed of light in different mediums" />
+    <meta name="keywords" content="immaculata, icd2o" />
+    <meta name="author" content="Kukwac" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="./Favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./Favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./Favicons/favicon-32x32.png" />
+    <link rel="manifest" href="./Favicons/site.webmanifest" />
+    <!--MDL stylesheets-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-purple.min.css" />
+    <!--CSS stylesheet-->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!--Title-->
+    <title>Speed of Light</title>
   </head>
   <body>
     <p>Paragraph</p>
+    <!--Web page content with a Javascript file and MDL components-->
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="./js/script.js"></script>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">Number Display</span>
+        </div>
+      </header>
+      <main class="mdl-layout__content">
+        <form action="#">
+          <h6>Min Number</h6>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="number"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="minNumber"
+            />
+            <label class="mdl-textfield__label" for="index-of-refraction">Enter number ...</label>
+            <span class="mdl-textfield__error">Invaild number!</span>
+          </div>
+        </form>
+        <form action="#">
+          <h6>Max Number</h6>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="number"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="maxNumber"
+            />
+            <label class="mdl-textfield__label" for="index-of-refraction-of-water">Enter number ...</label>
+            <span class="mdl-textfield__error">Invaild number!</span>
+          </div>
+        </form>
+        <!-- Raised button with ripple -->
+        <button
+          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+          onclick="numberDisplay()"
+        >
+          Display Result
+        </button>
+        <br />
+        <h4>Result:</h4>
+        <p>
+          <div id="min">
+          </div>
+          <div id="max">
+          </div>
+        </p>
+      </main>
+    </div>
   </body>
 </html>
