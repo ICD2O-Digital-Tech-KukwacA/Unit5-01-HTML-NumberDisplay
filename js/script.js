@@ -19,7 +19,7 @@ function numberDisplay() {
     let userNumMin = parseInt(document.getElementById('minNumber').value)
     let userNumMax = parseInt(document.getElementById('maxNumber').value)
 
-    while (counter < userNumMin) {
+    while (counter <= userNumMin) {
         // build the string of numbers with a line break each time
         numbers = numbers + counter + "<br>"
         // increment the counter
